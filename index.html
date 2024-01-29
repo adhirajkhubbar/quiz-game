@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img id="logo" src="logo.jpg" alt="">
+  <div id="start-page" class="page">
+    <h1>Welcome to the QUIZZY WHIZ!</h1>
+    <input type="text" id="username" placeholder="Enter your username">
+    <button class="startGameButton"onclick="startGame()">Start Game</button>
+    <div class="toggleThemeButton">
+        <button onclick="toggleTheme()">Toggle Theme</button>
+      </div>
+  </div>
+  
+  <div id="quiz-page" class="page">
+    <div class="startGameButton">
+    </div>
+    <h2>Question <span id="question-num"></span></h2>
+    <p id="question"></p>
+    <div id="options"></div>
+    <button onclick="nextQuestion()">Next</button>
+    <div>
+        <button onclick="highlightQuestion()">Highlight Question</button>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+
+  </div>
+  
+  <div id="end-page" class="page">
+    <h1>Quiz Completed!</h1>
+    <p>Your score: <span id="score"></span>/5</p>
+    <button onclick="restartGame()">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
